@@ -15,7 +15,7 @@
 
 # roe-plugin-env
 
-<!-- description -->
+[Roe](https://github.com/kaelzhang/roe) plugin to allow the sanbox to inherit extra environment variables from the current process
 
 ## Install
 
@@ -26,7 +26,14 @@ $ npm i roe-plugin-env
 ## Usage
 
 ```js
-import roe_plugin_env from 'roe-plugin-env'
+const EnvPlugin = require('roe-plugin-env')
+
+module.exports = {
+  plugins: [
+    // Allow sandbox to inherit `process.env.REDIS_HOST` of the parent process.
+    new EnvPlugin(['REDIS_HOST'])
+  ]
+}
 ```
 
 ## License
