@@ -1,6 +1,6 @@
 {
   "name": "roe-plugin-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "roe plugin to allow the sanbox to inherit extra environment variables from the current process",
   "main": "src/index.js",
   "scripts": {
@@ -17,7 +17,9 @@
     "url": "git://github.com/kaelzhang/roe-plugin-env.git"
   },
   "keywords": [
-    "roe-plugin-env"
+    "roe-plugin-env",
+    "roe-plugin",
+    "roe"
   ],
   "engines": {
     "node": ">= 6"
