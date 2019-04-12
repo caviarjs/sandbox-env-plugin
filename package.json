@@ -1,11 +1,11 @@
 {
-  "name": "roe-plugin-env",
+  "name": "@caviar/plugin-sandbox-env",
   "version": "1.0.1",
-  "description": "roe plugin to allow the sanbox to inherit extra environment variables from the current process",
+  "description": "caviar plugin to allow the sanbox to inherit extra environment variables from the current process",
   "main": "src/index.js",
   "scripts": {
     "test": "nyc ava --timeout=10s",
-    "test-no-report": "NODE_DEBUG=roe-plugin-env nyc ava --timeout=10s --verbose",
+    "test-no-report": "NODE_DEBUG=@caviar/plugin-sandbox-env nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
     "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/kaelzhang/roe-plugin-env.git"
+    "url": "git://github.com/kaelzhang/caviar-plugin-sandbox-env.git"
   },
   "keywords": [
-    "roe-plugin-env",
-    "roe-plugin",
-    "roe"
+    "@caviar/plugin-sandbox-env",
+    "caviar-plugin",
+    "caviar"
   ],
   "engines": {
     "node": ">= 6"
@@ -30,7 +30,7 @@
   "author": "kaelzhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaelzhang/roe-plugin-env/issues"
+    "url": "https://github.com/kaelzhang/caviar-plugin-sandbox-env/issues"
   },
   "devDependencies": {
     "ava": "^1.4.1",
