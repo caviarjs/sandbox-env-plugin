@@ -7,10 +7,10 @@ module.exports = class EnvPlugin {
     return true
   }
 
-  apply (lifecycle) {
-    lifecycle.hooks.sandboxEnvironment.tap('EnvPlugin', sandbox => {
+  apply (getHooks) {
+    getHooks().sandboxEnvironment.tap('EnvPlugin', ({inheritEnv}) => {
       this._allowedKeys.forEach(key => {
-        sandbox.inheritEnv(key)
+        inheritEnv(key)
       })
     })
   }
