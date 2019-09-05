@@ -8,10 +8,12 @@ module.exports = class EnvPlugin {
   }
 
   apply (getHooks) {
-    getHooks().sandboxEnvironment.tap('EnvPlugin', ({inheritEnv}) => {
-      this._allowedKeys.forEach(key => {
-        inheritEnv(key)
+    if (process.env.CAVIAR_SANDBOX === 'outer') {
+      getHooks().sandboxEnvironment.tap('EnvPlugin', ({inheritEnv}) => {
+        this._allowedKeys.forEach(key => {
+          inheritEnv(key)
+        })
       })
-    })
+    }
   }
 }
