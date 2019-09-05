@@ -1,6 +1,6 @@
 {
   "name": "@caviar/sandbox-env-plugin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "caviar plugin to allow the sanbox to inherit extra environment variables from the current process",
   "main": "src/index.js",
   "scripts": {
